@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter-XYZ/post</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <h1>Twitter-XYZ</h1>
+       <a href="http://localhost:8080/posts/form" ><button>&plus; New Post</button></a>
+      </nav>
+      <main>
+        <h2>ALL POSTS :</h2>
+        <% for(let p of db){%>
+
+        <div class="post">
+            <p class="user">
+              <%=p.name%> 
+              <div>
+              <a href="http://localhost:8080/posts/<%=p.id%>/details"><button class="view">see details</button></a>  
+              <a href="http://localhost:8080/posts/<%=p.id%>/edit"><button class="edit">Edit</button></a>  
+
+              <form action="http://localhost:8080/posts/<%=p.id%>?_method=DELETE" method="post"><button class="delete">Delete</button> </form>  
+              </div>
+            </p>
+            <p class="message">
+              <%=p.post%>
+            </p>
+          </div>
+        <%}%>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter-xyz/Editpost</title>
+    <link rel="stylesheet" href="/style2.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <form action="http://localhost:8080/posts/<%=post.id%>?_method=PATCH" method="post">
+        <h1>Edit this Post</h1>
+        <div>
+            Enter your Username : <%= post.name%>
+        </div>
+        <div>
+            <label for="post_message">Edit your post : </label>
+            <textarea name="changedpost" id="post_message" row="5" cols="10"><%=post.post%></textarea>
+        </div>
+
+        <button type="submit">Apply changes</button>
+      </form>
+    </div>
+  </body>
+</html>

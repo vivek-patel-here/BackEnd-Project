@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter-xyz/New post</title>
+    <link rel="stylesheet" href="/style2.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <form action="http://localhost:8080/posts" method="post">
+        <h1>Add a New Post</h1>
+        <div>
+            <label for="username">Enter your Username : </label>
+            <input type="text" id="username" name="username" />
+        </div>
+        <div>
+            <label for="post_message">Enter your post : </label>
+            <textarea name="post" id="post_message" row="5" cols="10"></textarea>
+        </div>
+
+        <button type="submit"> Add Post</button>
+      </form>
+    </div>
+  </body>
+</html>
